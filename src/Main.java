@@ -1,66 +1,63 @@
 
-/*Створити 3 програми:
+    /*Створити програму для виведення чисел від 1 до 10
 
-        1 : програму для знаходження більшого з двох чисел
+            Показати всі парні числа в діапазоні від 1 до 100
 
-        2 : програму для знаходження меншого з двох чисел
+            Знайти факторіал числа 7
 
-        3 : програму для перевірка заданого числа на парність*/
+            Вивести числа фібоначчі до 100 (значення самого числа не повинно перевищувати 100)*/
 
-public class Main {
+
+    import java.util.Scanner;
+
+    public class Main {
 
     public static void main(String[] args) {
 
-        // програму для знаходження більшого з двох чисел
-
-        System.out.println(" -- > #1 out of 3 ");
-
-        var n = 5;
-        var m = 14.5;
-        boolean a = n < m ;
-
-
-        if (a){
-            System.out.println("Between " + m + " and " + n + " number " + m + " is bigger");
+        //Створити програму для виведення чисел від 1 до 10
+        System.out.println("Number line is from 1 to 10 is: ");
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + " ");
         }
-            else
-                System.out.println("Between " + m + " and " + n + " number "  + n + " is bigger");
+        System.out.println();
 
-        // програму для знаходження меншого з двох чисел
-
-        System.out.println(" -- > #2 out of 3 ");
-
-        var k = 5.115;
-        var w = 100004.5;
-        boolean b = k > w ;
-
-
-        if (b){
-            System.out.println("Between " + k + " and " + w + " Number " + w + " is smaller");
+        //Показати всі парні числа в діапазоні від 1 до 100
+        int b = 0;
+        System.out.println();
+        System.out.println("Even numbers up to 100 are: ");
+        while (b <= 100) {
+            if (b % 2 == 0) {
+                System.out.print((b + " "));
+            }
+            b++;
         }
-        else
-            System.out.println("Between " + k + " and " + w + " Number " + k + " is smaller");
+        System.out.println();
 
-        // програму для перевірка заданого числа на парність
+        //Знайти факторіал числа 7
+        int i, fact = 1;
+        int number = 7;
 
-        System.out.println(" -- > task#3 out of 3");
-        System.out.println("By last day on current month seems " );
+        for (i = 1; i <= number; i++) {
+            fact = fact * i;
+        }
+        System.out.println();
+        System.out.println("Factorial of " + number + " is: " + fact);
 
-        var l = "Leap year! ";
-        var m30 = "It is probably April, June, September or November";
-        var f = "It is February";
-        var m31 = "It is January, March, May, July, August, October or December";
+        // Вивести числа фібоначчі до 100 (значення самого числа не повинно перевищувати 100)
 
-        int number = 31;
+        System.out.println();
+        System.out.println("Fibonacci task ");
 
-        if (number % 2 == 0 && number == 28 ) {
-            System.out.println(f);
-        } else if (number % 2 == 0 && number == 30) {
-            System.out.println(m30);
-        } else if (number % 2 == 1 && number == 31 ) {
-            System.out.println(m31);
-        } else if (number % 2 == 1 && number == 29)
-            System.out.println(l);
+        int f1 = 0;
+        int f2 = 1;
+        int f = 0;
+        while (f < 100) {
+            System.out.print(f + " ");
+            f = f1 + f2;
+            f1 = f2;
+            f2 = f;
+        }
+        System.out.println();
 
     }
 }
